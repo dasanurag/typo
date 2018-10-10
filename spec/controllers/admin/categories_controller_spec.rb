@@ -16,7 +16,8 @@ describe Admin::CategoriesController do
     assert_response :redirect, :action => 'index'
   end
 
-  describe "test_edit" do
+  #describe "test_edit" do
+  describe "test_new" do
     before(:each) do
       get :edit, :id => Factory(:category).id
     end

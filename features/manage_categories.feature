@@ -16,7 +16,9 @@ Scenario: Sucessfully create a new category
 Scenario: Sucessfully edit an existing category
   Given I am on the new category page
   When I follow "Edit"
+  And fill in "category_name" with "name" 
+  And fill in "category_permalink" with "permalink" 
   And fill in "category_description" with "Interesting" 
   And I press "Save"
-  Then I should see "Interesting"
+  Then I should see "Category was successfully saved"
   
